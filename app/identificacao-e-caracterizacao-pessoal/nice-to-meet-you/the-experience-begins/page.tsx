@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { BookOpen, Target } from "lucide-react";
+import NiceToMeetYouCredits from "../../../components/credits/NiceToMeetYouCredits";
+import ModuleNavigation from "../../../components/navigation/ModuleNavigation";
 
 export default function TheExperienceBegins() {
     return (
@@ -58,51 +60,13 @@ export default function TheExperienceBegins() {
                 </p>
             </section>
 
+            <ModuleNavigation
+                prev="/identificacao-e-caracterizacao-pessoal/nice-to-meet-you"
+                next="/identificacao-e-caracterizacao-pessoal/nice-to-meet-you/episode"
+            />
+
             {/* Créditos */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                className="text-sm text-gray-600 text-center border-t border-blue-200 pt-6"
-            >
-                <p className="max-w-2xl mx-auto leading-relaxed">
-                    <strong>Créditos:</strong> Este material foi baseado em:<br />
-                    MOREIRA, Helton Bezerra; PAULO, Juciana Maria; FILHO, Lourival Soares de Aquino;
-                    LIMA, Júlio César Ferreira. <em>English.</em> Instituto Federal Sul-riograndense / Rede e-Tec Brasil, Pelotas: 2015.
-                </p>
-            </motion.div>
-
-            {/* Navegação entre módulos */}
-            <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="mt-12 flex justify-between items-center"
-            >
-                {/* Botão Voltar */}
-                <a
-                    href="/identificacao-e-caracterizacao-pessoal/nice-to-meet-you"
-                    className="flex items-center gap-2 px-5 py-2 rounded-lg border border-blue-300 
-    text-blue-700 hover:bg-blue-50 hover:-translate-x-1 transition-all duration-200"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                    </svg>
-                    Voltar
-                </a>
-
-                {/* Botão Próximo */}
-                <a
-                    href="/identificacao-e-caracterizacao-pessoal/nice-to-meet-you/episode"
-                    className="flex items-center gap-2 px-5 py-2 rounded-lg bg-blue-600 text-white 
-    hover:bg-blue-700 hover:translate-x-1 transition-all duration-200"
-                >
-                    Próximo
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
-                </a>
-            </motion.div>
+            <NiceToMeetYouCredits />
         </main>
     );
 }
