@@ -3,10 +3,11 @@
 import { motion } from "framer-motion";
 import ModuleNavigation from "../../../components/navigation/ModuleNavigation";
 import NiceToMeetYouCredits from "../../../components/credits/NiceToMeetYouCredits";
+import GlossaryBox from "../../../components/glossary/GlossaryBox";
 import { BookCheck, BookOpen } from "lucide-react";
 
 export default function ResumoEGlossarioPage() {
-    const glossary = [
+    const glossary: [string, string][] = [
         ["Small", "pequeno"],
         ["Town", "cidade"],
         ["Bedroom", "quarto"],
@@ -72,23 +73,7 @@ export default function ResumoEGlossarioPage() {
             </div>
 
             {/* GLOSSÁRIO */}
-            <motion.h2
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-2xl font-bold text-blue-700 mb-4 flex items-center gap-2"
-            >
-                <BookOpen className="w-8 h-8 text-blue-600" />
-                Glossary
-            </motion.h2>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2 mb-10 text-gray-700">
-                {glossary.map(([en, pt], i) => (
-                    <p key={i} className="flex justify-between border-b border-gray-200 pb-1">
-                        <span className="font-semibold">{en}</span>
-                        <span>{pt}</span>
-                    </p>
-                ))}
-            </div>
+            <GlossaryBox terms={glossary} />
 
             {/* Navigation */}
             <ModuleNavigation
