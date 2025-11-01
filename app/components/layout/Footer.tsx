@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <footer className="mt-20 bg-white/90 backdrop-blur-md border-t border-blue-200 pt-12 pb-6">
-            <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center md:text-left">
+            <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 text-center md:text-left">
 
                 {/* Logo & About */}
                 <div>
@@ -20,9 +20,9 @@ export default function Footer() {
                         />
                     </div>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                        Plataforma independente criada para organizar e facilitar o estudo do curso de inglês
-                        disponibilizado gratuitamente no
-                        <span className="font-semibold"> Aprenda Mais (MEC)</span>.
+                        Projeto educacional independente para facilitar o estudo do curso de inglês
+                        da plataforma pública <strong>Aprenda Mais (MEC)</strong>.
+                        Não emitimos certificados.
                     </p>
                 </div>
 
@@ -36,11 +36,22 @@ export default function Footer() {
                     </ul>
                 </div>
 
+                {/* Legal */}
+                <div>
+                    <h3 className="font-semibold text-blue-800 mb-3">Legal</h3>
+                    <ul className="space-y-2 text-gray-700 text-sm">
+                        <li><Link href="/politica-de-privacidade" className="hover:text-blue-700 transition">Política de Privacidade</Link></li>
+                        <li><Link href="/politica-de-cookies" className="hover:text-blue-700 transition">Política de Cookies</Link></li>
+                        <li><Link href="/termos-de-uso" className="hover:text-blue-700 transition">Termos de Uso</Link></li>
+                        <li><Link href="/transparencia-e-direitos-autorais" className="hover:text-blue-700 transition">Transparência & Direitos Autorais</Link></li>
+                    </ul>
+                </div>
+
                 {/* Credits */}
                 <div>
                     <h3 className="font-semibold text-blue-800 mb-3">Créditos</h3>
                     <p className="text-gray-600 text-sm">
-                        Conteúdo baseado no curso oferecido pela plataforma
+                        Conteúdo baseado no curso da plataforma
                         <span className="font-semibold"> Aprenda Mais (MEC)</span>.
                     </p>
 
@@ -57,7 +68,7 @@ export default function Footer() {
             {/* Bottom bar */}
             <div className="mt-10 border-t border-blue-200 pt-5 text-center text-sm text-gray-600">
                 <p className="text-xs">
-                    © {new Date().getFullYear()} StudyEnglishHub — Projeto educacional sem fins lucrativos.
+                    © {new Date().getFullYear()} EnglishStudyHub — Projeto educacional sem fins lucrativos.
                 </p>
             </div>
         </footer>
