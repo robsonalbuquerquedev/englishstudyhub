@@ -3,6 +3,7 @@ import "./globals.css";
 import Sidebar from "./components/layout/Sidebar";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+import CookieConsent from "./components/shared/CookieConsent";
 
 export const metadata: Metadata = {
   title: "EnglishStudyHub | Seu Portal Organizado para Estudar Inglês",
@@ -57,6 +58,8 @@ export default function RootLayout({
         <Header />
         <main className="bg-gray-50 pt-20">{children}</main>
         <Footer />
+        {/* Cookie Consent */}
+        <CookieConsent />
       </body>
     </html>
   );
