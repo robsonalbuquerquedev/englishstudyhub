@@ -78,7 +78,7 @@ export default function ResumoEGlossarioPage() {
             {/* Navigation */}
             <ModuleNavigation
                 prev="/identificacao-e-caracterizacao-pessoal/nice-to-meet-you/countries-and-nationalities"
-                next="/identificacao-e-caracterizacao-pessoal/nice-to-meet-you/meeting-new-friends"
+                next="/identificacao-e-caracterizacao-pessoal/meeting-new-friends"
             />
 
             <NiceToMeetYouCredits />
