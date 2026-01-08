@@ -1,4 +1,4 @@
-export type ModuleLevel = "Básico" | "Intermediário" | "Avançado";
+export type ModuleLevel = "basico" | "intermediario" | "avancado";
 
 export type ModuleIcon =
   | "user"
