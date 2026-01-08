@@ -1,48 +1,60 @@
-import type { Metadata } from "next";
 import "./globals.css";
-import Sidebar from "./components/layout/Sidebar";
-import Header from "./components/layout/Header";
-import Footer from "./components/layout/Footer";
-import CookieConsent from "./components/shared/CookieConsent";
+import MainLayout from "@/components/layout/MainLayout";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "EnglishStudyHub | Seu Portal Organizado para Estudar Inglês",
+  title: "EnglishStudyHub | Estude Inglês do Básico ao Avançado com Organização",
   description:
-    "Portal educacional gratuito inspirado no curso de inglês da plataforma Aprenda Mais (MEC). Estude inglês com organização, design moderno e navegação simples. Fluência é constância — practice every day!",
+    "EnglishStudyHub é uma plataforma educacional independente para estudar inglês do nível básico ao avançado. Conteúdo organizado por módulos, linguagem clara e prática constante para evoluir com confiança.",
   keywords: [
-    "inglês",
     "estudar inglês",
-    "curso de inglês",
-    "aprender inglês",
-    "english course",
+    "aprender inglês online",
+    "curso de inglês gratuito",
+    "inglês básico intermediário avançado",
     "english study hub",
-    "aprenda mais mec",
-    "portal de estudos",
-    "vocabulário inglês",
-    "gramática inglesa"
+    "english learning platform",
+    "vocabulário em inglês",
+    "gramática inglesa",
+    "prática de inglês",
+    "aprender inglês sozinho"
   ],
   authors: [
-    { name: "StudyEnglishHub" },
+    { name: "EnglishStudyHub" },
     { name: "Robson Monteiro de Albuquerque" }
   ],
+  creator: "EnglishStudyHub",
+  publisher: "EnglishStudyHub",
+  metadataBase: new URL("https://englishstudyhub.com.br"),
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "StudyEnglishHub | Estude Inglês com Organização e Praticidade",
+    title: "EnglishStudyHub | Inglês Organizado do Básico ao Avançado",
     description:
-      "Plataforma independente que organiza os módulos do curso de inglês gratuito do Aprenda Mais (MEC). Conteúdo livre, visual moderno e fácil navegação.",
-    url: "https://seudominio.com", // troque quando tiver o domínio
-    siteName: "EnglisStudyhHub",
+      "Aprenda inglês de forma progressiva e organizada. Módulos básicos, intermediários e avançados focados em uso real da língua.",
+    url: "https://englishstudyhub.com.br",
+    siteName: "EnglishStudyHub",
     type: "website",
+    locale: "pt_BR",
     images: [
       {
         url: "/studyenglishlogorbg.png",
         width: 1200,
         height: 630,
-        alt: "StudyEnglishHub",
+        alt: "EnglishStudyHub — Plataforma para Estudo de Inglês",
       },
     ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
@@ -53,13 +65,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className="bg-blue-50"
+      <body
       >
-        <Header />
-        <main className="bg-gray-50 pt-20">{children}</main>
-        <Footer />
+        <MainLayout>
+          {children}
+        </MainLayout>
         {/* Cookie Consent */}
-        <CookieConsent />
       </body>
     </html>
   );
