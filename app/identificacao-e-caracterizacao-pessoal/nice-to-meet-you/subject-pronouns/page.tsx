@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import LessonTable from "../../../components/table/LessonTable";
-import ModuleNavigation from "../../../components/navigation/ModuleNavigation";
-import NiceToMeetYouCredits from "../../../components/credits/NiceToMeetYouCredits";
+import LessonTable from "@/components/table/LessonTable";
+import ModuleNavigation from "@/components/navigation/ModuleNavigation";
+import NiceToMeetYouCredits from "@/components/credits/NiceToMeetYouCredits";
 import { Users } from "lucide-react";
 
 // Tabela de Subject Pronouns

@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import ModuleNavigation from "../../../components/navigation/ModuleNavigation";
-import NiceToMeetYouCredits from "../../../components/credits/NiceToMeetYouCredits";
-import GlossaryBox from "../../../components/glossary/GlossaryBox";
+import ModuleNavigation from "@/components/navigation/ModuleNavigation";
+import NiceToMeetYouCredits from "@/components/credits/NiceToMeetYouCredits";
+import GlossaryBox from "@/components/glossary/GlossaryBox";
 import { BookCheck, BookOpen } from "lucide-react";
 
 export default function ResumoEGlossarioPage() {

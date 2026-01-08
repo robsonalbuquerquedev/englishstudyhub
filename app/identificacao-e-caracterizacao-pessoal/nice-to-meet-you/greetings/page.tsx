@@ -1,8 +1,8 @@
 "use client";
 
-import LessonTable from "../../../components/table/LessonTable";
-import ModuleNavigation from "../../../components/navigation/ModuleNavigation";
-import NiceToMeetYouCredits from "../../../components/credits/NiceToMeetYouCredits";
+import LessonTable from "@/components/table/LessonTable";
+import ModuleNavigation from "@/components/navigation/ModuleNavigation";
+import NiceToMeetYouCredits from "@/components/credits/NiceToMeetYouCredits";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Handshake } from "lucide-react";

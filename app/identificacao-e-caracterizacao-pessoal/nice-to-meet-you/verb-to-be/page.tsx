@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import DialogueBox from "../../../components/dialogue/DialogueBox";
-import LessonTable from "../../../components/table/LessonTable";
-import ModuleNavigation from "../../../components/navigation/ModuleNavigation";
-import NiceToMeetYouCredits from "../../../components/credits/NiceToMeetYouCredits";
+import DialogueBox from "@/components/dialogue/DialogueBox";
+import LessonTable from "@/components/table/LessonTable";
+import ModuleNavigation from "@/components/navigation/ModuleNavigation";
+import NiceToMeetYouCredits from "@/components/credits/NiceToMeetYouCredits";
 import { BookOpenCheck } from "lucide-react";
 
 // diálogo exemplo (você pode ajustar se tiver o original)

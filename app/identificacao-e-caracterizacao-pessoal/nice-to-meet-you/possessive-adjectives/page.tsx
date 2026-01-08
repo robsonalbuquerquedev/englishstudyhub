@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import LessonTable from "../../../components/table/LessonTable";
-import ModuleNavigation from "../../../components/navigation/ModuleNavigation";
-import NiceToMeetYouCredits from "../../../components/credits/NiceToMeetYouCredits";
+import LessonTable from "@/components/table/LessonTable";
+import ModuleNavigation from "@/components/navigation/ModuleNavigation";
+import NiceToMeetYouCredits from "@/components/credits/NiceToMeetYouCredits";
 import { HeartHandshake } from "lucide-react";
 
 // tabelas (você pode preencher os dados oficiais do material)

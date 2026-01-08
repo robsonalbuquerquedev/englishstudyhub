@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import { Video } from "lucide-react";
 import Link from "next/link";
-import NiceToMeetYouCredits from "../../../components/credits/NiceToMeetYouCredits";
-import ModuleNavigation from "../../../components/navigation/ModuleNavigation";
+import NiceToMeetYouCredits from "@/components/credits/NiceToMeetYouCredits";
+import ModuleNavigation from "@/components/navigation/ModuleNavigation";
 
 export default function EpisodeNiceToMeetYou() {
     return (

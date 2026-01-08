@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { BookOpen, Target } from "lucide-react";
-import NiceToMeetYouCredits from "../../../components/credits/NiceToMeetYouCredits";
-import ModuleNavigation from "../../../components/navigation/ModuleNavigation";
+import NiceToMeetYouCredits from "@/components/credits/NiceToMeetYouCredits";
+import ModuleNavigation from "@/components/navigation/ModuleNavigation";
 
 export default function TheExperienceBegins() {
     return (
