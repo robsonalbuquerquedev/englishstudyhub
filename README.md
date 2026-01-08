@@ -1,91 +1,103 @@
-# EnglisStudyhHub
+# EnglishStudyHub
 
-**EnglisStudyhHub** é um projeto educacional independente e sem fins lucrativos, criado para facilitar o estudo do curso de inglês gratuito oferecido pela plataforma pública **Aprenda Mais (MEC)**.  
+**EnglishStudyHub** é uma plataforma educacional **independente** e com identidade própria, criada para apoiar pessoas que desejam estudar inglês de forma organizada, acessível e constante.
 
-A proposta é simples:
+A proposta é simples e direta:
 
-📚 Reunir conteúdo  
-✅ Organizar módulos  
-🎯 Facilitar a navegação  
-✨ Criar uma experiência moderna e agradável de estudo  
+📚 Organizar conteúdos de estudo de inglês
+🧩 Estruturar módulos progressivos
+🎯 Facilitar a navegação e a revisão diária
+✨ Oferecer uma experiência moderna, clara e motivadora
 
-O objetivo é permitir que estudantes revisem e pratiquem inglês com autonomia e constância — porque **fluência é construída todos os dias**.
-
-> 💡 Todo o conteúdo educacional original pertence ao MEC e à plataforma Aprenda Mais.  
-Este site não substitui nem representa oficialmente a plataforma.  
+O foco do EnglishStudyHub é ajudar estudantes a criarem **rotina**, **autonomia** e **continuidade**, porque fluência não nasce pronta — **ela é construída todos os dias**.
 
 ---
 
-## 🎯 Objetivo
+## 🎯 Objetivo do Projeto
 
-Criar um ambiente **limpo, intuitivo e organizado** para que alunos possam:
+Criar um ambiente digital **limpo, intuitivo e bem estruturado** para que estudantes possam:
 
-- Revisar lições do curso de inglês
-- Navegar pelos módulos com facilidade
-- Praticar leitura e vocabulário diariamente
-- Ter uma experiência visual moderna e motivadora
+* Estudar inglês de forma autodidata
+* Revisar conteúdos sempre que necessário
+* Navegar por módulos organizados por temas
+* Praticar leitura, vocabulário e compreensão
+* Manter consistência nos estudos diários
+
+O EnglishStudyHub não depende de plataformas externas para existir e evolui continuamente com foco total na experiência do aluno.
 
 ---
 
-## 🏛 Conteúdo Base
+## 🧠 Metodologia
 
-Este projeto utiliza como referência o curso:
+O projeto segue uma lógica de aprendizado baseada em:
 
-> **Inglês — Módulos 1 a 13**  
-> Disponível gratuitamente na plataforma **Aprenda Mais / MEC**  
-> https://aprendamais.mec.gov.br/
+* 📈 Progressão gradual de dificuldade
+* 🧩 Conteúdo dividido em módulos e tópicos claros
+* 🔁 Revisão constante como parte do aprendizado
+* 🎯 Clareza visual para reduzir carga cognitiva
 
-Para acessar os cursos oficialmente é necessário criar uma conta no Aprenda Mais.
+A ideia central é simples:
 
-🎓 **Somente a plataforma oficial emite certificados.**  
-Aqui, o acesso é livre — porém sem certificação.
+> **Estudar inglês deve ser leve, organizado e possível todos os dias.**
+
+---
+
+## 🧩 Estrutura da Plataforma
+
+* Página inicial com apresentação clara do projeto
+* Módulos organizados por nível e tema
+* Navegação intuitiva entre conteúdos
+* Componentes reutilizáveis
+* Sidebar interativa para acesso rápido
+* Página “Sobre” explicando missão e visão
+* Página de contato funcional
+
+Tudo foi pensado para reduzir distrações e aumentar o foco no aprendizado.
 
 ---
 
 ## 🧠 Tecnologias Utilizadas
 
-| Tecnologia | Para que serve |
-|-----------|----------------|
-Next.js 14 | Framework React moderno  
-React | UI declarativa  
-TypeScript | Tipagem e segurança  
-TailwindCSS | Estilização rápida e responsiva  
-Framer Motion | Animações fluidas  
-Lucide Icons | Ícones modernos  
-FormSubmit | Envio de formulários sem backend  
+| Tecnologia        | Finalidade                            |
+| ----------------- | ------------------------------------- |
+| **Next.js 14**    | Framework React moderno               |
+| **React**         | Construção de interfaces declarativas |
+| **TypeScript**    | Tipagem e segurança no código         |
+| **Tailwind CSS**  | Estilização rápida e responsiva       |
+| **Framer Motion** | Animações suaves                      |
+| **Lucide Icons**  | Ícones modernos                       |
+| **FormSubmit**    | Envio de formulários sem backend      |
 
 ---
 
-## 🚀 Funcionalidades
+## 🌱 Filosofia
 
-- Página inicial estilo **hero**
-- Módulos organizados por tema
-- Componentes reutilizáveis
-- Navegação fluida e animações
-- Design responsivo (desktop & mobile)
-- Menu com **sidebar interativa**
-- Página de contato funcional
-- Página "Sobre" detalhada
+O EnglishStudyHub acredita que:
 
----
+* Educação deve ser acessível
+* Organização facilita o aprendizado
+* Design claro melhora a concentração
+* Pequenos passos diários geram grandes resultados
 
-## 🌱 Filosofia do Projeto
-
-A missão do StudyEnglishHub é democratizar e organizar o acesso ao conteúdo gratuito já existente, adicionando:
-
-✅ Melhor usabilidade  
-✅ Visual mais moderno  
-✅ Acesso rápido aos módulos  
-✅ Organização progressiva dos estudos
+Este projeto existe para **organizar**, **facilitar** e **motivar** — não para substituir professores, cursos formais ou certificações.
 
 ---
 
-## 🔗 Links Importantes
+## 🚀 Status do Projeto
 
-| Recurso | Link |
-|--------|------|
-Portal oficial Aprenda Mais | https://aprendamais.mec.gov.br/  
-Repositório deste projeto | https://englishstudyhub.vercel.app/  
+🟢 Em desenvolvimento contínuo
+🧠 Conteúdos em expansão
+🎨 Interface em constante refinamento
+
+Sugestões, melhorias e contribuições são sempre bem-vindas.
+
+---
+
+## 🔗 Links
+
+| Recurso    | Link                                                                       |
+| ---------- | -------------------------------------------------------------------------- |
+| Plataforma | [https://englishstudyhub.com.br/](https://englishstudyhub.com.br/) |
 
 ---
 
@@ -93,21 +105,19 @@ Repositório deste projeto | https://englishstudyhub.vercel.app/
 
 Desenvolvido com ❤️ por:
 
-**Robson Monteiro de Albuquerque**  
-Desenvolvedor e entusiasta de tecnologia, educação e aprendizagem contínua.
+**Robson Monteiro de Albuquerque**
+Desenvolvedor, estudante de tecnologia e entusiasta da educação autodidata.
 
 > *Grow fluency every day.* 🌱✨
 
-[LinkedIn](https://www.linkedin.com/in/robson-monteiro-de-albuquerque-8b3853230/)
-[Portfólio](https://robson-dev-portfolio.vercel.app/#/)  
+🔗 [LinkedIn](https://www.linkedin.com/in/robson-monteiro-de-albuquerque-8b3853230/)
+🌐 [Portfólio](https://robson-dev-portfolio.vercel.app/#/)
 
 ---
 
-## 📜 Licença [MIT LICENSE](LICENSE)
+## 📜 Licença
 
-Projeto educativo e não comercial.  
-Livre para estudar, reforçar e inspirar.
+Este projeto é distribuído sob a licença **[MIT](LICENSE)**.
 
----
-
-
+Uso educacional e não comercial.
+Livre para estudar, aprender, adaptar e evoluir.
