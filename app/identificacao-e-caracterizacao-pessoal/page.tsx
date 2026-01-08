@@ -1,7 +1,7 @@
 "use client";
 
-import ModuleIntro from "../components/modules/ModuleIntro";
-import ETecCredits from "../components/shared/ETecCredits";
+import ModuleIntro from "@/components/modules/ModuleIntro";
+import ETecCredits from "@/components/shared/ETecCredits";
 import { BookOpen, UserCheck, Users, MapPin } from "lucide-react";
 
 export default function IdentificacaoECaracterizacaoPessoal() {

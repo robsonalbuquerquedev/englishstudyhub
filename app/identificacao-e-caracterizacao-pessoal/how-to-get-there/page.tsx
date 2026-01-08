@@ -1,27 +1,7 @@
 "use client";
 
-import TopicList from "../../components/topics/TopicList";
-import {
-    MapPinned,
-    Navigation,
-    BookOpen,
-    Video,
-    Ruler,
-    Clock,
-    Building,
-    Landmark,
-    HelpCircle,
-    Map,
-    Calendar,
-    Timer,
-    ArrowBigRight,
-    ListOrdered,
-    Volume2,
-    Type,
-    FileText,
-    GraduationCap,
-    Flag
-} from "lucide-react";
+import TopicList from "@/components/topics/TopicList";
+import { MapPinned, Navigation, Video, Ruler, Clock, Building, Landmark, HelpCircle, Map, Calendar, Timer, ArrowBigRight, ListOrdered, Volume2, Type, FileText, GraduationCap, Flag } from "lucide-react";
 
 export default function HowToGetThere() {
     const topics = [

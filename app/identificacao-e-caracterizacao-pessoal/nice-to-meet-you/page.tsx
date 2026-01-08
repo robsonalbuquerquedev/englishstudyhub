@@ -1,21 +1,6 @@
-"use client";
+import { BookOpen, Handshake, Smile, Flag, Type, Users, User, Globe, NotebookPen, Languages } from "lucide-react";
 
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-    BookOpen,
-    Handshake,
-    Smile,
-    Flag,
-    Type,
-    Users,
-    User,
-    Globe,
-    NotebookPen,
-    Languages
-} from "lucide-react";
-
-import TopicList from "../../components/topics/TopicList";
+import TopicList from "@/components/topics/TopicList";
 
 export default function NiceToMeetYou() {
     const topics = [

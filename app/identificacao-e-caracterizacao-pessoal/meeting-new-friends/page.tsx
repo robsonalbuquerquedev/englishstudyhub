@@ -1,22 +1,8 @@
 "use client";
 
-import TopicList from "../../components/topics/TopicList";
+import TopicList from "@/components/topics/TopicList";
 
-import {
-    BookOpen,
-    Video,
-    Users,
-    Handshake,
-    Boxes,
-    Briefcase,
-    Hash,
-    FileText,
-    HelpCircle,
-    Phone,
-    MessageCircle,
-    Repeat,
-    Flag
-} from "lucide-react";
+import { BookOpen, Video, Users, Boxes, Briefcase, Hash, FileText, HelpCircle, Phone, MessageCircle, Repeat, Flag } from "lucide-react";
 
 export default function MeetingNewFriends() {
     const topics = [
