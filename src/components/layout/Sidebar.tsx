@@ -15,9 +15,9 @@ interface SidebarProps {
 }
 
 const modulesByLevel: Record<ModuleLevel, typeof modulesData> = {
-    Básico: modulesData.filter(m => m.level === "Básico"),
-    Intermediário: modulesData.filter(m => m.level === "Intermediário"),
-    Avançado: modulesData.filter(m => m.level === "Avançado"),
+    Básico: modulesData.filter(m => m.level === "basico"),
+    Intermediário: modulesData.filter(m => m.level === "intermediario"),
+    Avançado: modulesData.filter(m => m.level === "avancado"),
 }
 
 const levelStyles: Record<ModuleLevel, { title: string; icon: string }> = {
