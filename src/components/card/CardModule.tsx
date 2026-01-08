@@ -15,13 +15,6 @@ const levelStyles: Record<ModuleLevel, string> = {
     avancado: "bg-red-100 text-red-700",
 };
 
-
-interface Module {
-    title: string;
-    link: string;
-    level: ModuleLevel;
-}
-
 export default function CardModule() {
     const [page, setPage] = useState(0);
 

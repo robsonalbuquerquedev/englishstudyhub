@@ -4,11 +4,13 @@ import { modulesData } from "@/data/modulesData"
 import { moduleIcons } from "@/components/icons/modulesIcons"
 import ModuleLink from "@/components/modules/ModuleLink"
 
-const levelStyles = {
-    Básico: "bg-green-100 text-green-700",
-    Intermediário: "bg-yellow-100 text-yellow-700",
-    Avançado: "bg-red-100 text-red-700",
-}
+type ModuleLevel = "basico" | "intermediario" | "avancado";
+
+const levelStyles: Record<ModuleLevel, string> = {
+    basico: "bg-green-100 text-green-700",
+    intermediario: "bg-yellow-100 text-yellow-700",
+    avancado: "bg-red-100 text-red-700",
+};
 
 export default function CardModuleFull() {
     return (
@@ -25,10 +27,10 @@ export default function CardModuleFull() {
                                 <Icon className="h-7 w-7 text-blue-600" />
 
                                 {/* Level */}
-                                <span
-                                    className={`w-fit rounded-full px-3 py-1 text-xs font-medium ${levelStyles[module.level]}`}
-                                >
-                                    {module.level}
+                                <span className={`... ${levelStyles[module.level]}`}>
+                                    {module.level === "basico" && "Básico"}
+                                    {module.level === "intermediario" && "Intermediário"}
+                                    {module.level === "avancado" && "Avançado"}
                                 </span>
 
                                 {/* Title */}
