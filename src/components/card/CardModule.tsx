@@ -7,11 +7,20 @@ import ModuleLink from "@/components/modules/ModuleLink";
 
 const ITEMS_PER_PAGE = 6;
 
-const levelStyles = {
-    iniciante: "bg-green-100 text-green-700",
-    intermediário: "bg-yellow-100 text-yellow-700",
-    avançado: "bg-red-100 text-red-700",
+type ModuleLevel = "basico" | "intermediario" | "avancado";
+
+const levelStyles: Record<ModuleLevel, string> = {
+    basico: "bg-green-100 text-green-700",
+    intermediario: "bg-yellow-100 text-yellow-700",
+    avancado: "bg-red-100 text-red-700",
 };
+
+
+interface Module {
+    title: string;
+    link: string;
+    level: ModuleLevel;
+}
 
 export default function CardModule() {
     const [page, setPage] = useState(0);
@@ -48,12 +57,12 @@ export default function CardModule() {
                                 <Icon className="h-6 w-6 text-blue-600" />
 
                                 {/* Level */}
-                                <span
-                                    className={`w-fit rounded-full px-3 py-1 text-xs font-medium ${levelStyles[module.level]}`}
-                                >
-                                    {module.level}
+                                <span className={`... ${levelStyles[module.level]}`}>
+                                    {module.level === "basico" && "Básico"}
+                                    {module.level === "intermediario" && "Intermediário"}
+                                    {module.level === "avancado" && "Avançado"}
                                 </span>
-
+                                
                                 {/* Title */}
                                 <h3 className="font-semibold text-blue-900">
                                     {module.title}
