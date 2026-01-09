@@ -8,11 +8,11 @@ interface DialogueLine {
 }
 
 interface DialogueBoxProps {
-    title?: string;
+    // title?: string;
     lines: DialogueLine[];
 }
 
-export default function DialogueBox({ title = "Dialogue", lines }: DialogueBoxProps) {
+export default function DialogueBox({ lines }: DialogueBoxProps) {
     return (
         <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -20,7 +20,7 @@ export default function DialogueBox({ title = "Dialogue", lines }: DialogueBoxPr
             transition={{ duration: 0.5 }}
             className="bg-blue-50 border border-blue-200 rounded-xl p-6 shadow mb-10"
         >
-            <h2 className="text-lg font-semibold text-blue-700 mb-3">{title}</h2>
+            {/* <h2 className="text-lg font-semibold text-blue-700 mb-3">{title}</h2> */}
 
             <div className="space-y-2 text-gray-800 font-medium">
                 {lines.map((line, index) => (
