@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://englishstudyhub.com.br
+
+# Sitemaps
+Sitemap: https://englishstudyhub.com.br/sitemap.xml
