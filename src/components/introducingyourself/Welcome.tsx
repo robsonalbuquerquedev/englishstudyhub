@@ -87,7 +87,7 @@ export default function Welcome() {
 
                 <p className="text-gray-700 leading-relaxed mt-6">
                     Imagine seu primeiro dia em um lugar novo. Você vê alguém sorrindo e
-                    decide dizer “olá”. Respira fundo e fala seu nome. Esse pequeno
+                    decide dizer &rdquo;olá&rdquo;. Respira fundo e fala seu nome. Esse pequeno
                     momento é o início de uma conversa — e toda conversa começa com uma
                     apresentação.
                 </p>
