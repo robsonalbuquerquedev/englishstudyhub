@@ -1,5 +1,6 @@
 import { Navigation, HelpCircle, MapPin, Map, Building, ArrowRight, Route, Flag } from "lucide-react";
-import ModuleTopics from "@/components/modules/ModuleTopics";
+// import ModuleTopics from "@/components/modules/ModuleTopics";
+import UnderDevelopment from "@/components/UnderDevelopment";
 
 const topics = [
   { title: "Asking for Directions Politely", icon: <HelpCircle />, link: "asking-for-directions-politely" },
@@ -14,10 +15,11 @@ const topics = [
 
 export default function AskingForAndGivingDirectionsPage() {
   return (
-    <ModuleTopics
-      title="Asking for and Giving Directions"
-      basePath="/basic/personal-information-introductions/asking-for-directions"
-      topics={topics}
-    />
+    // <ModuleTopics
+    //   title="Asking for and Giving Directions"
+    //   basePath="/basic/personal-information-introductions/asking-for-directions"
+    //   topics={topics}
+    // />
+    <UnderDevelopment />
   );
 }
