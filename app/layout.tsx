@@ -1,5 +1,6 @@
 import "./globals.css";
 import MainLayout from "@/components/layout/MainLayout";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -65,12 +66,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        {/* Tag obrigatória do AdSense */}
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-9360124149047745"
+        />
+      </head>
       <body
       >
         <MainLayout>
           {children}
         </MainLayout>
         {/* Cookie Consent */}
+
+        {/* Google AdSense Script */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9360124149047745"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
