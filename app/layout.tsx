@@ -2,6 +2,7 @@ import "./globals.css";
 import MainLayout from "@/components/layout/MainLayout";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastVisitTracker from "@/components/tracking/LastVisitTracker";
 
 export const metadata: Metadata = {
   title: "EnglishStudyHub | Estude Inglês do Básico ao Avançado com Organização",
@@ -78,6 +79,8 @@ export default function RootLayout({
         <MainLayout>
           {children}
         </MainLayout>
+
+        <LastVisitTracker />  {/* client component, lê localStorage */}
         {/* Cookie Consent */}
 
         {/* Google AdSense Script */}

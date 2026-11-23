@@ -1,94 +1,177 @@
-"use client";
-
-import { useState } from "react";
 import { modulesData } from "@/data/modulesData";
 import { moduleIcons } from "@/components/icons/modulesIcons";
 import ModuleLink from "@/components/modules/ModuleLink";
-
-const ITEMS_PER_PAGE = 6;
+import { BookOpen, Clock, ArrowRight } from "lucide-react";
 
 type ModuleLevel = "basico" | "intermediario" | "avancado";
 
-const levelStyles: Record<ModuleLevel, string> = {
-    basico: "bg-green-100 text-green-700",
-    intermediario: "bg-yellow-100 text-yellow-700",
-    avancado: "bg-red-100 text-red-700",
+/**
+ * Campos opcionais para enriquecer os cards.
+ * Adicione-os aos itens de modulesData aos poucos: o que não existir simplesmente não aparece.
+ */
+type ModuleItem = (typeof modulesData)[number] & {
+    description?: string;
+    lessonsCount?: number;
+    duration?: string; // ex.: "2 h"
 };
 
+const LEVELS: {
+    id: ModuleLevel;
+    label: string;
+    headline: string;
+    intro: string;
+    badge: string;
+}[] = [
+    {
+        id: "basico",
+        label: "Básico",
+        headline: "Comece do zero",
+        intro:
+            "A base de tudo: vocabulário essencial, estruturas simples e frases do dia a dia para você se comunicar desde cedo.",
+        badge: "bg-green-100 text-green-700",
+    },
+    {
+        id: "intermediario",
+        label: "Intermediário",
+        headline: "Ganhe fluência",
+        intro:
+            "Amplie o vocabulário, domine os tempos verbais e entenda textos e conversas com mais segurança.",
+        badge: "bg-yellow-100 text-yellow-700",
+    },
+    {
+        id: "avancado",
+        label: "Avançado",
+        headline: "Refine o seu inglês",
+        intro:
+            "Expressões, nuances e estruturas mais complexas para falar e escrever com naturalidade.",
+        badge: "bg-red-100 text-red-700",
+    },
+];
+
 export default function CardModule() {
-    const [page, setPage] = useState(0);
+    const modules = modulesData as ModuleItem[];
 
-    const start = page * ITEMS_PER_PAGE;
-    const end = start + ITEMS_PER_PAGE;
-
-    const currentModules = modulesData.slice(start, end);
-    const totalPages = Math.ceil(modulesData.length / ITEMS_PER_PAGE);
+    const groups = LEVELS.map((level) => ({
+        ...level,
+        items: modules.filter((m) => m.level === level.id),
+    })).filter((group) => group.items.length > 0);
 
     return (
         <>
             {/* Section Header */}
-            <div className="mb-10 text-center">
-                <h2 className="text-3xl font-bold text-blue-900">
-                    Módulos de Estudo 📚
-                </h2>
+            <header className="mb-8 text-center">
+                <h2 className="text-3xl font-bold text-blue-900">Módulos de estudo</h2>
 
-                <p className="mt-2 text-gray-600">
+                <p className="mt-2 mx-auto max-w-2xl text-gray-600">
                     Conteúdos organizados por nível para você evoluir no inglês passo a passo.
+                    Não sabe por onde começar? Comece pelo Básico e avance no seu ritmo.
                 </p>
-            </div>
 
-            {/* Grid */}
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {currentModules.map((module) => {
-                    const Icon = moduleIcons[module.icon];
+                {/* Navegação rápida entre níveis (âncoras) */}
+                <nav aria-label="Níveis de estudo" className="mt-5 flex flex-wrap justify-center gap-2">
+                    {groups.map((group) => (
+                        <a
+                            key={group.id}
+                            href={`#nivel-${group.id}`}
+                            className={`rounded-full px-4 py-1.5 text-sm font-semibold transition hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600 ${group.badge}`}
+                        >
+                            {group.label} · {group.items.length}
+                        </a>
+                    ))}
+                </nav>
+            </header>
 
-                    return (
-                        <ModuleLink key={module.link} href={module.link}>
-                            <div className="h-full rounded-xl bg-white p-6 shadow-md flex flex-col gap-3 transition hover:shadow-lg">
+            {/* Um bloco por nível: todos os módulos ficam no HTML, sem paginação */}
+            <div className="space-y-14">
+                {groups.map((group, groupIndex) => (
+                    <section
+                        key={group.id}
+                        id={`nivel-${group.id}`}
+                        aria-labelledby={`titulo-${group.id}`}
+                        className="scroll-mt-24"
+                    >
+                        <div className="mb-6">
+                            <span
+                                className={`inline-block rounded-full px-3 py-1 text-xs font-semibold ${group.badge}`}
+                            >
+                                {group.label}
+                            </span>
+                            <h3
+                                id={`titulo-${group.id}`}
+                                className="mt-2 text-2xl font-bold text-blue-900"
+                            >
+                                {group.headline}
+                            </h3>
+                            <p className="mt-1 max-w-3xl text-gray-600">{group.intro}</p>
+                        </div>
 
-                                {/* Icon */}
-                                <Icon className="h-6 w-6 text-blue-600" />
+                        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                            {group.items.map((module, index) => {
+                                const Icon = moduleIcons[module.icon];
+                                const isStartHere = groupIndex === 0 && index === 0;
 
-                                {/* Level */}
-                                <span className={`... ${levelStyles[module.level]}`}>
-                                    {module.level === "basico" && "Básico"}
-                                    {module.level === "intermediario" && "Intermediário"}
-                                    {module.level === "avancado" && "Avançado"}
-                                </span>
-                                
-                                {/* Title */}
-                                <h3 className="font-semibold text-blue-900">
-                                    {module.title}
-                                </h3>
-                            </div>
-                        </ModuleLink>
-                    );
-                })}
-            </div>
+                                return (
+                                    <li key={module.link}>
+                                        <ModuleLink href={module.link}>
+                                            <article className="group relative h-full rounded-xl bg-white p-6 shadow-md flex flex-col gap-3 transition hover:shadow-lg">
+                                                {isStartHere && (
+                                                    <span className="absolute -top-3 right-4 rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white shadow">
+                                                        Comece por aqui
+                                                    </span>
+                                                )}
 
-            {/* Pagination */}
-            <div className="mt-10 flex items-center justify-center gap-4">
-                <button
-                    onClick={() => setPage((p) => Math.max(p - 1, 0))}
-                    disabled={page === 0}
-                    className="rounded-lg bg-blue-600 px-4 py-2 text-white disabled:opacity-40 cursor-pointer"
-                >
-                    Anterior
-                </button>
+                                                <div className="flex items-center justify-between">
+                                                    <Icon className="h-6 w-6 text-blue-600" aria-hidden="true" />
+                                                    <span
+                                                        className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${group.badge}`}
+                                                    >
+                                                        {group.label}
+                                                    </span>
+                                                </div>
 
-                <span className="text-sm text-gray-600">
-                    Página {page + 1} de {totalPages}
-                </span>
+                                                <h4 className="font-semibold text-blue-900">
+                                                    {module.title}
+                                                </h4>
 
-                <button
-                    onClick={() =>
-                        setPage((p) => Math.min(p + 1, totalPages - 1))
-                    }
-                    disabled={page === totalPages - 1}
-                    className="rounded-lg bg-blue-600 px-4 py-2 text-white disabled:opacity-40 cursor-pointer"
-                >
-                    Próximo
-                </button>
+                                                {module.description && (
+                                                    <p className="text-sm text-gray-600">
+                                                        {module.description}
+                                                    </p>
+                                                )}
+
+                                                {(module.lessonsCount || module.duration) && (
+                                                    <p className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-500">
+                                                        {module.lessonsCount ? (
+                                                            <span className="inline-flex items-center gap-1">
+                                                                <BookOpen className="h-3.5 w-3.5" aria-hidden="true" />
+                                                                {module.lessonsCount}{" "}
+                                                                {module.lessonsCount === 1 ? "lição" : "lições"}
+                                                            </span>
+                                                        ) : null}
+                                                        {module.duration ? (
+                                                            <span className="inline-flex items-center gap-1">
+                                                                <Clock className="h-3.5 w-3.5" aria-hidden="true" />
+                                                                {module.duration}
+                                                            </span>
+                                                        ) : null}
+                                                    </p>
+                                                )}
+
+                                                <span className="mt-auto inline-flex items-center gap-1 pt-2 text-sm font-semibold text-blue-700">
+                                                    Estudar módulo
+                                                    <ArrowRight
+                                                        className="h-4 w-4 transition group-hover:translate-x-1"
+                                                        aria-hidden="true"
+                                                    />
+                                                </span>
+                                            </article>
+                                        </ModuleLink>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </section>
+                ))}
             </div>
         </>
     );
