@@ -1,4 +1,4 @@
-import QuickReviewAndGlossary from "@/components/module/QuickReviewAndGlossary";
+import QuickReviewAndGlossary from "@/components/modules/QuickReviewAndGlossary";
 
 /**
  * Exemplo de aula migrada: só o texto do resumo e as rotas ficam aqui.
