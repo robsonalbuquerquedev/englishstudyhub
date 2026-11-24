@@ -21,7 +21,7 @@ const START_PATHS = [
         icon: Languages,
         label: "Quero ampliar vocabulário",
         description: "Glossários organizados por tema, com exemplos de uso.",
-        href: "/#ver-modulos",
+        href: "/glossario",
     },
     {
         icon: Gamepad2,

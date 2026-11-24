@@ -19,7 +19,7 @@ const METHOD_STEPS = [
         title: "2. Amplie o vocabulário",
         description:
             "Consulte os glossários por tema e aprenda as palavras em contexto, com exemplos de uso.",
-        href: "/#ver-modulos",
+        href: "/glossario",
         cta: "Abrir glossários",
     },
     {

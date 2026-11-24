@@ -103,7 +103,7 @@ export default function CountriesGameSection() {
                     <p className="mt-4 text-sm text-gray-600">
                         Quer ir além dos países?{" "}
                         <Link
-                            href="/#ver-modulos"
+                            href="/glossario"
                             className="font-semibold text-blue-700 underline-offset-4 hover:underline"
                         >
                             Veja os glossários por tema
